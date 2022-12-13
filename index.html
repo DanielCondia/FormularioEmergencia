@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgencias</title>
+</head>
+<h1>
+    Urgencias!!
+</h1>
+<body>
+    <fieldset>
+        <legend>
+            <h2>
+                Ingresar Datos
+            </h2>
+        </legend>
+        <!-- Area de texto para ingresar el nombre-->
+        <label for="inputNombre">
+           <strong>
+                Nombre:
+           </strong>
+        </label>
+        <!--Area de ingreso del nombre con id = inputNombre-->
+        <input 
+            type="text"
+            placeholder="Nombres"
+            id="inputNombre"
+        >
+         <!-- Area de texto para ingresar el apellido-->
+        <label for="inputApellidos">
+            <strong>
+                Apellidos:
+            </strong>
+        </label>
+        <!--Area de ingreso del apellido con id = inputApellidos-->
+        <input 
+            type="text"
+            placeholder="Apellidos"
+            id="inputApellidos"
+        >
+        <br><br>
+        <label>
+           <strong>
+                Elija tipo ID:
+           </strong>
+        </label>
+        <br>
+        <p>
+            <strong>
+                <input 
+                    type="radio"
+                    id="tipoDocRC"
+                >
+                <label for="tipoDocRC">
+                    RC
+                </label>
+            </strong>
+            <strong>
+                <input 
+                    type="radio"
+                    id="tipoDocTI"
+                >
+                <label for="tipoDocTI">
+                    TI
+                </label>
+            </strong>
+            <strong>
+                <input 
+                    type="radio"
+                    id="tipoDocCC"
+                >
+                <label for="tipoDocCC">
+                    CC
+                </label>
+            </strong>
+            <strong>
+                <input 
+                    type="radio"
+                    id="tipoDocCE"
+                >
+                <label for="tipoDocCE">
+                    CE
+                </label>
+            </strong>
+            <strong>
+                <input 
+                    type="radio"
+                    id="tipoDocPA"
+                >
+                <label for="tipoDocPA">
+                    PA
+                </label>
+            </strong>
+        </p>
+        <h2>
+            <p id="advertencia2">
+
+            </p>
+        </h2>
+        <style>
+            #advertencia2{
+                color: red;
+            }
+        </style>
+        <label for="inputNumDoc">
+            <strong>
+                Número Documento:
+            </strong>
+        </label>
+        <input 
+            type="number"
+            placeholder="#Doc"
+            id="inputNumDoc"
+        >
+        <br>
+        <h2>
+            <p id="advertencia" color="red">
+
+            </p>
+        </h2>
+        <style>
+            #advertencia{
+                color: red;
+            }
+        </style>
+       
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h2>
+                Observaciones
+            </h2>
+        </legend>
+        <label>
+            <strong>
+                Nivel Emergencia
+            </strong>
+        </label>
+        <br>
+        <p>
+            <strong>
+                <label for="nivelEmergencia1">
+                    1
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="nivelEmergencia1"
+                >
+            </strong>
+            <strong>
+                <label for="nivelEmergencia2">
+                    2
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="nivelEmergencia2"
+                >
+            </strong>
+            <strong>
+                <label for="nivelEmergencia3">
+                    3
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="nivelEmergencia3"
+                >
+            </strong>
+            <strong>
+                <label for="nivelEmergencia4">
+                    4
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="nivelEmergencia4"
+                >
+            </strong>
+            <strong>
+                <label for="nivelEmergencia5">
+                    5
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="nivelEmergencia5"
+                >
+            </strong>
+        </p>
+        <h2>
+            <p id="advertencia3">
+
+            </p>
+        </h2>
+        <style>
+            #advertencia3{
+                color: red;
+            }
+        </style>
+        <br>
+        <label for="textObservaciones">
+            Ingrese observaciones de emergencia:
+        </label>
+        <textarea name="observaciones" id="textObservaciones" cols="60" rows="4">
+            
+        </textarea>
+    </fieldset>
+    <br><br>
+    <button onclick="evaluar();">
+        Enviar
+    </button>
+    <br><br>
+    <section>
+        <output id="seccionResultadosPersona">
+            
+        </output>
+        <br>
+        <output id="seccionResultadosEmergencia">
+            
+        </output>
+        <br>
+        <h3 id="seccionResultadosObservaciones">
+
+        </h3>
+    </section>
+</body>
+<script src="./main.js"></script>
+</html>
