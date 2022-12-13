@@ -59,6 +59,52 @@ function evaluar(rojo, naranja, amarillo, verde, azul){
     else{
         document.getElementById("advertencia3").innerHTML = "Favor elija un tipo de emergencia";
     }
+    
+    //Creamos Codigo personal
+    var letrasNombre = [];
+    for (let index = 0; index < 2; index++) {
+        letrasNombre.push(nombre[index].toUpperCase());
+    }
+    var cleanName = letrasNombre.join('');
+    var letrasApellido = [];
+    let i = apellido.length;
+    control = 0;
+    while(control < apellido.length){
+        if(letrasApellido.length == 2){
+            break;
+        }
+        i--;
+        letrasApellido.push(apellido[i]);
+        control++;
+    }
+    let primeraLetraApellido = letrasApellido[1];
+    let segundaLetraApellido = letrasApellido[0];
+    let cleanLastName = primeraLetraApellido.toUpperCase() + segundaLetraApellido.toUpperCase();
+    if(document.getElementById("tipoDocRC").checked){
+        let tipoDoc = "RC";
+        var codigo = tipoDoc + id + cleanName + cleanLastName;
+        document.getElementById("outputCodigoPersonal").innerHTML = "<label><strong>Código personal:</strong></label>" + codigo;
+    }
+    else if(document.getElementById("tipoDocTI").checked){
+        let tipoDoc = "TI";
+        var codigo = tipoDoc + id + cleanName + cleanLastName;
+        document.getElementById("outputCodigoPersonal").innerHTML = "<label><strong>Código personal:</strong></label>" + codigo;
+    }
+    else if(document.getElementById("tipoDocCC").checked){
+        let tipoDoc = "CC";
+        var codigo = tipoDoc + id + cleanName + cleanLastName;
+        document.getElementById("outputCodigoPersonal").innerHTML = "<label><strong>Código personal:</strong></label>" + codigo;
+    }
+    else if(document.getElementById("tipoDocCE").checked){
+        let tipoDoc = "CE";
+        var codigo = tipoDoc + id + cleanName + cleanLastName;
+        document.getElementById("outputCodigoPersonal").innerHTML = "<label><strong>Código personal:</strong></label>" + codigo;
+    }
+    else if(document.getElementById("tipoDocPA").checked){
+        let tipoDoc = "PA";
+        var codigo = tipoDoc + id + cleanName + cleanLastName;
+        document.getElementById("outputCodigoPersonal").innerHTML = "<label><strong>Código personal:</strong></label>" + codigo;
+    }
 }
 
 /**
